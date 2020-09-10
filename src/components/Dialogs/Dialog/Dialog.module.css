@@ -1,0 +1,32 @@
+.active{
+    background-color: #86abaa;
+}
+.dialog{
+    padding: 20px;
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.dialog::after{
+    /*content: '';*/
+    /*display: block;*/
+    /*height: 2px;*/
+    /*background-color: #5d8382;*/
+    /*width: 60px;*/
+    /*margin-left: 30px;*/
+    content:'';
+    position:absolute;
+    left:0; right:0;
+    top:90%;
+    margin:0 auto;
+    width:60%;
+    height: .1rem;
+    background: #5d8382;
+}
+
+.dialog span{
+    font-size: 20px;
+}

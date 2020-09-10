@@ -1,0 +1,21 @@
+
+
+.header{
+    grid-area: h;
+    background: #9fc9c8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.name{
+    color: #fcea4c;
+    font-weight: lighter;
+    margin-left: 35px;
+}
+
+.header img{
+    width: 70px;
+    margin-left: 35px;
+}

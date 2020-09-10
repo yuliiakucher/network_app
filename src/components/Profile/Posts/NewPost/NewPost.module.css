@@ -1,0 +1,28 @@
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.distinction{
+    background-color: #648382;
+    height: 2px;
+    width: 45rem;
+    margin: 2rem;
+}
+
+.text{
+    height: 10rem;
+    font-size: 20px;
+}
+
+button{
+    height: 3rem;
+    width: 7rem;
+    align-self: center;
+    margin-top: 2rem;
+    background-color: #f7c5bc;
+    border: #925c58 solid 2px;
+    font-size: 1.5rem;
+    color: #925c58;
+}
