@@ -21,7 +21,10 @@ const App = (props) => {
                         />}/>
                     <Route
                         path='/dialogs'
-                        component={() => <Dialogs dialogsData={props.state.DialogsData} dialogData={props.dialogData}/>}/>
+                        component={() => <Dialogs
+                            dialogsData={props.state.DialogsData}
+                            dispatch={props.dispatch}
+                        />}/>
                 </div>
             </div>
         </BrowserRouter>
