@@ -6,14 +6,15 @@ import './index.css';
 import App from './App';
 import MyContext from "./MyContext";
 import store from "./redux/redux-store";
+import {Provider} from "react-redux";
 
 
 export let rerenderDOM = () => {
     ReactDOM.render(
         <React.StrictMode>
-            <MyContext.Provider value={store}>
+            <Provider store={store}>
                 <App/>
-            </MyContext.Provider>
+            </Provider>
         </React.StrictMode>,
         document.getElementById('root')
     )
