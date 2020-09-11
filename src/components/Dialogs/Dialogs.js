@@ -7,7 +7,6 @@ import new_message from "./Message/NewMessage/NewMessage.module.css";
 
 const Dialogs = (props) => {
 
-
     const DialogItem = props.dialogsData.map(dialog => <Dialog name={dialog.name} key={dialog.id} id={dialog.id}/>)
     const MessageItem = props.messagesData.map(message => <Message message={message.message} key={message.id}/>)
 

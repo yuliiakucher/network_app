@@ -5,8 +5,8 @@ import {addMessageActionCreator, updateMessageTextActionCreator} from "../../../
 
 const NewMessage = (props) => {
 
-
     const changeMessage = (e) =>{
+
         let text = e.target.value
         props.dispatch(updateMessageTextActionCreator(text))
     }

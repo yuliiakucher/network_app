@@ -2,13 +2,14 @@ import React from "react";
 import profile from './Profile.module.css'
 import Posts from "./Posts/Posts";
 import ProfileDetails from "./ProfileDetails/ProfileDetails";
+import PostsContainer from "./Posts/PostsContainer";
 
-const Profile = (props) => {
+const Profile = () => {
 
     return (
         <>
             <ProfileDetails />
-            <Posts ProfilePage={props.ProfilePage} dispatch={props.dispatch} />
+            <PostsContainer />
         </>
     )
 }

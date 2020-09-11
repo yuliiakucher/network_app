@@ -11,7 +11,7 @@ const Navbar = (props) => {
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/dialogs'>Messages</NavLink></li>
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/news'>News</NavLink></li>
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/music'>Music</NavLink></li>
-                <Sidebar data={props.SidebarPage.sidebarData}/>
+                {/*<Sidebar data={props.SidebarPage.sidebarData}/>*/}
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/settings'>Settings</NavLink></li>
             </ul>
         </nav>

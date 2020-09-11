@@ -7,25 +7,20 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import './App.css';
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
-const App = (props) => {
+const App = () => {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <Navbar SidebarPage={props.state.SidebarPage}/>
+                <Navbar />
                 <div className='app-wrapper-content'>
                     <Route
                         path='/profile'
-                        render={() => <Profile
-                            ProfilePage={props.state.ProfilePage}
-                            dispatch={props.dispatch}
-                        />}/>
+                        render={() => <Profile />}/>
                     <Route
                         path='/dialogs'
                         component={() => <DialogsContainer
-                            DialogsPage={props.state.DialogsPage}
-                            dispatch={props.dispatch}
-                            store={props.store}
+
                         />}/>
                 </div>
             </div>

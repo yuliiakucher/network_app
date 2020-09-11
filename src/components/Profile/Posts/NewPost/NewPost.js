@@ -4,6 +4,7 @@ import {addPostActionCreator, updateNewTextActionCreator} from "../../../../redu
 
 
 const NewPost = (props) => {
+    debugger
     let addPost = () => {
         props.addPost()
     }
