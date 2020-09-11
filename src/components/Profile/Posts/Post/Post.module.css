@@ -12,11 +12,11 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    width: 50rem;
+    width: 40rem;
 }
 
 .avatar{
-    width: 100px;
+    width: 70px;
     border-radius: 100%;
     border: white solid 2px;
     margin: 20px;

@@ -2,6 +2,7 @@
 .wrapper{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .distinction{
@@ -13,16 +14,17 @@
 
 .text{
     height: 10rem;
-    font-size: 20px;
+    font-size: 15px;
+    width: 40rem;
 }
 
 button{
-    height: 3rem;
-    width: 7rem;
+    height: 2rem;
+    width: 6rem;
     align-self: center;
     margin-top: 2rem;
     background-color: #f7c5bc;
     border: #925c58 solid 2px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #925c58;
 }

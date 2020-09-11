@@ -2,6 +2,7 @@ import React from "react";
 import {NavLink} from 'react-router-dom'
 import navbar from './Navbar.module.css'
 import Sidebar from "./Sidebar/Sidebar";
+import SidebarContainer from "./Sidebar/SidebarContainer";
 
 const Navbar = (props) => {
     return (
@@ -11,7 +12,7 @@ const Navbar = (props) => {
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/dialogs'>Messages</NavLink></li>
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/news'>News</NavLink></li>
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/music'>Music</NavLink></li>
-                {/*<Sidebar data={props.SidebarPage.sidebarData}/>*/}
+                <SidebarContainer />
                 <li className={navbar.link}><NavLink className={navbar.navlink} activeClassName={navbar.active} to='/settings'>Settings</NavLink></li>
             </ul>
         </nav>

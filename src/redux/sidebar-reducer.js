@@ -1,4 +1,5 @@
 
+
 let initialState = {
     sidebarData:[
         {id: '1', name: 'Sasha', img:'https://produkty.in.ua/api/default_avatar.png'},
@@ -8,7 +9,6 @@ let initialState = {
 }
 
 const SidebarReducer = (state = initialState, action) => {
-
     return state
 }
 

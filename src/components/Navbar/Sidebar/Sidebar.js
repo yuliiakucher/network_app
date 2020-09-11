@@ -3,7 +3,7 @@ import close from './Sidebar.module.css'
 
 
 const Sidebar = (props) => {
-    const ItemElement = props.data.map(friend => (
+    const ItemElement = props.sidebarData.map(friend => (
         <div className={close.items}>
             <img className={close.icon_image} src={friend.img} alt='friend'/>
             <div>{friend.name}</div>
