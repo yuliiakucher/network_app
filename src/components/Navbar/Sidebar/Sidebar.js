@@ -1,11 +1,11 @@
 import React from "react";
-import close from './CloseFriends.module.css'
+import close from './Sidebar.module.css'
 
 
-const CloseFriends = (props) => {
+const Sidebar = (props) => {
     const ItemElement = props.data.map(friend => (
         <div className={close.items}>
-            <img className={close.icon} src={friend.img} alt='friend'/>
+            <img className={close.icon_image} src={friend.img} alt='friend'/>
             <div>{friend.name}</div>
         </div>
 
@@ -13,7 +13,7 @@ const CloseFriends = (props) => {
     return(
         <>
             <h3 className={close.header}>Friends</h3>
-            <div className={close.wrapper}>
+            <div className={close.item_wrapper}>
                 {ItemElement}
             </div>
         </>
@@ -21,4 +21,4 @@ const CloseFriends = (props) => {
     )
 }
 
-export default CloseFriends
+export default Sidebar

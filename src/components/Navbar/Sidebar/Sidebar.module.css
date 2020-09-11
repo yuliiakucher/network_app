@@ -1,5 +1,5 @@
 
-.wrapper{
+.item_wrapper{
     display: flex;
     flex-direction: row;
     margin-left: 20px;
@@ -11,7 +11,7 @@
     flex-direction: column;
     margin-right: 5px;
 }
-.icon{
+.icon_image{
     width: 50px;
 }
 

@@ -1,12 +1,13 @@
 import ProfileReducer from './profile-reducer'
 import DialogsReducer from './dialogs-reducer'
+import SidebarReducer from "./sidebar-reducer";
 
 
 
 let store ={
     _state: {
-        ProfileData : {
-            postData: [
+        ProfilePage : {
+            postsData: [
                 {message:'this is my first post', likes_count: 45},
                 {message:'this is my second post', likes_count: 5},
                 {message:'this is my third post', likes_count: 85},
@@ -15,14 +16,14 @@ let store ={
             ],
             newPostText: 'la la la'
         },
-        DialogsData: {
-            dialogData: [
+        DialogsPage: {
+            dialogsData: [
                 {id:'1', name: 'Misha'},
                 {id:'2', name: 'Sasha'},
                 {id:'3', name: 'Maria'},
                 {id:'4', name: 'Yuna'},
             ],
-            messageData: [
+            messagesData: [
                 {id:'1', message: 'Hi'},
                 {id:'2', message: 'Hello'},
                 {id:'3', message: 'How was your day'},
@@ -30,8 +31,8 @@ let store ={
             ],
             newMessageText: 'hi'
         },
-        FriendsData: {
-            friendsData:[
+        SidebarPage: {
+            sidebarData:[
                 {id: '1', name: 'Sasha', img:'https://produkty.in.ua/api/default_avatar.png'},
                 {id: '2', name: 'Masha', img:'https://produkty.in.ua/api/default_avatar.png'},
                 {id: '3', name: 'Zhenia', img:'https://produkty.in.ua/api/default_avatar.png'},
@@ -66,6 +67,7 @@ let store ={
 
         this._state.ProfileData = ProfileReducer(this._state.ProfileData, action)
         this._state.DialogsData = DialogsReducer(this._state.DialogsData, action)
+        this._state.SidebarData = SidebarReducer(this._state.SidebarData, action)
 
         this._callSubscriber(this._state)
 

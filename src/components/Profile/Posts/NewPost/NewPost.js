@@ -5,13 +5,12 @@ import {addPostActionCreator, updateNewTextActionCreator} from "../../../../redu
 
 const NewPost = (props) => {
     let addPost = () => {
-        props.dispatch(addPostActionCreator())
+        props.addPost()
     }
     let RefCurrent = React.createRef()
-
     let postChange = () => {
         let text = RefCurrent.current.value
-        props.dispatch(updateNewTextActionCreator(text))
+        props.updateNewText(text)
     }
 
     return(

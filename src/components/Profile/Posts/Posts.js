@@ -1,17 +1,17 @@
 import React from "react";
 import Post from "./Post/Post";
-import NewPost from "./NewPost/NewPost";
+import NewPostContainer from "./NewPost/NewPostContainer";
 
 
 const Posts =(props) =>{
 
 
 
-    const PostItem = props.postData.postData.map(post =>  <Post likes_count={post.likes_count} message={post.message}/>)
+    const PostItem = props.ProfilePage.postsData.map(post =>  <Post likes_count={post.likes_count} message={post.message}/>)
 
     return(
         <div>
-            <NewPost newPostText={props.postData.newPostText} dispatch={props.dispatch} />
+            <NewPostContainer newPostText={props.ProfilePage.newPostText} dispatch={props.dispatch} />
             {PostItem}
         </div>
     )
