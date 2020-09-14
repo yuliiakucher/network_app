@@ -23,7 +23,7 @@ const App = () => {
                         component={() => <DialogsContainer/>}/>
                     <Route
                         path='/users'
-                        component={() => <UsersContainer/>}/>
+                        render={() => <UsersContainer/>}/>
                 </div>
             </div>
         </BrowserRouter>

@@ -7,21 +7,12 @@ import {faMapMarkedAlt} from "@fortawesome/free-solid-svg-icons";
 
 class Users extends React.Component{
 
-    // constructor(props) {
-    //     super(props);
-    //     axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
-    //         // props.set_users(response.data.items)
-    //         console.log(response.data.items)
-    //     })
-    // }
 
     componentDidMount() {
-        debugger
         axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
             this.props.set_users(response.data.items)
             console.log(response.data.items)
         })
-        debugger
     }
 
     render() {
