@@ -1,33 +1,28 @@
 import React from "react";
-import styles from './Users.module.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faMapMarkedAlt} from '@fortawesome/free-solid-svg-icons'
-import default_avatar from '../../../media/img/default_avatar.png'
-import * as axios from 'axios'
+import * as axios from "axios";
+import styles from "./Users.module.css";
+import default_avatar from "../../../media/img/default_avatar.png";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faMapMarkedAlt} from "@fortawesome/free-solid-svg-icons";
 
-const Users = (props) => {
-
-    const renderUsers = () => {
-        if (props.users.length === 0){
-            axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
-                props.set_users(response.data.items)
-            })
-        }
+class Users extends React.Component{
+    constructor(props) {
+        super(props);
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+            props.set_users(response.data.items)
+        })
     }
 
-
-
-
-    return (
-        <div>
-            <button onClick={renderUsers}>Show users!</button>
-            {props.users.map(user => (
+    render() {
+        return(
+            <div>
+                {this.props.users.map(user => (
                     <div className={styles.users_wrapper} key={user.id}>
                         <div className={styles.subwrapper_left}>
                             <img className={styles.photo} src={user.photos.small ? user.photos.small : default_avatar} alt='users icon'/>
                             {user.followed
-                                ? <button className={styles.btn_user} onClick={() => {props.unfollowUser(user.id)}}>Unfollow</button>
-                                : <button className={styles.btn_user} onClick={() => {props.followUser(user.id)}}>Follow</button>
+                                ? <button className={styles.btn_user} onClick={() => {this.props.unfollowUser(user.id)}}>Unfollow</button>
+                                : <button className={styles.btn_user} onClick={() => {this.props.followUser(user.id)}}>Follow</button>
                             }
                         </div>
                         <div className={styles.subwrapper_center}>
@@ -43,10 +38,13 @@ const Users = (props) => {
                         </div>
                     </div>
                 ))
-            }
-        </div>
+                }
+            </div>
+        )
 
-    )
+    }
+
+
 }
 
 export default Users
