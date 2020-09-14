@@ -3,32 +3,7 @@ const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET_USERS'
 
 const initialState = {
-    usersData: [
-        // {
-        //     id: '1',
-        //     firstName: 'Sasha',
-        //     status: 'Feelin\' good!',
-        //     followed: false,
-        //     location: {country: 'Ukraine', city: 'Kyiv'},
-        //     iconUrl: 'https://produkty.in.ua/api/default_avatar.png'
-        // },
-        // {
-        //     id: '2',
-        //     firstName: 'Masha',
-        //     status: 'Feelin\' moody!',
-        //     followed: false,
-        //     location: {country: 'Ukraine', city: 'Kharkiv'},
-        //     iconUrl: 'https://produkty.in.ua/api/default_avatar.png'
-        // },
-        // {
-        //     id: '3',
-        //     firstName: 'Tasha',
-        //     status: 'Let\'s go for a walk!',
-        //     followed: false,
-        //     location: {country: 'Ukraine', city: 'Lviv'},
-        //     iconUrl: 'https://produkty.in.ua/api/default_avatar.png'
-        // },
-    ]
+    usersData: []
 }
 
 const UsersReducer = (state=initialState, action) => {
@@ -58,7 +33,7 @@ const UsersReducer = (state=initialState, action) => {
         case SET_USERS: {
             return {
                 ...state,
-                usersData: [...state.usersData, ...action.users]
+                usersData: action.users
             }
         }
         default: return state

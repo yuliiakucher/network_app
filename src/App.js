@@ -6,6 +6,7 @@ import Profile from "./components/Content/Profile/Profile";
 import './App.css';
 import DialogsContainer from "./components/Content/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Content/Users/UsersContainer";
+import Users from "./components/Content/Users/Users";
 
 const App = () => {
     return (

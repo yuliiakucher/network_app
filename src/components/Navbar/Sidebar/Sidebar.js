@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 
 const Sidebar = (props) => {
     const ItemElement = props.sidebarData.map(friend => (
-        <div className={close.items}>
+        <div className={close.items} key={friend.id}>
             <img className={close.icon_image} src={friend.img} alt='friend'/>
             <div>{friend.name}</div>
         </div>
