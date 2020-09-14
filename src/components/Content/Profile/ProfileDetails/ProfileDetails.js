@@ -8,7 +8,7 @@ const ProfileDetails = () => {
         <>
             <div>
                 <img className={details.profile_img}
-                     src={require('../../../media/img/rose.jpg')}
+                     src={require('../../../../media/img/rose.jpg')}
                      alt='profile'/>
             </div>
             <div>

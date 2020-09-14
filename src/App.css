@@ -16,7 +16,7 @@
 
 .app-wrapper-content{
   grid-area: c;
-  background: #f4f1c8;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;

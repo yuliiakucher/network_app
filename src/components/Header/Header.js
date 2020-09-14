@@ -9,7 +9,7 @@ const Header = () =>{
     return(
         <header className={header.header}>
             <div className={header.header_container}>
-                <img src={require('../../media/img/header-icon.png')} alt='header-icon'/>
+                <img src={require('../../media/img/h_icon.png')} alt='header-icon'/>
                 <h1 className={header.name}>Lorem Ipsum</h1>
             </div>
             <SearcherContainer/>

@@ -2,7 +2,7 @@
 
 .header{
     grid-area: h;
-    background: #9fc9c8;
+    background: linear-gradient(90deg,#f4cbb7,#d9a4f9);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,7 +17,7 @@
 }
 
 .name{
-    color: #fcea4c;
+    color: #6964ff;
     font-weight: lighter;
     margin-left: 35px;
 }

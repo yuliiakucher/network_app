@@ -1,5 +1,6 @@
 import React from "react";
 import close from './Sidebar.module.css'
+import {NavLink} from "react-router-dom";
 
 
 const Sidebar = (props) => {
@@ -12,7 +13,10 @@ const Sidebar = (props) => {
     ))
     return(
         <>
-            <h3 className={close.header}>Friends</h3>
+            <NavLink to='/users' className={close.link}>
+                <h3 className={close.header}>Friends</h3>
+            </NavLink>
+
             <div className={close.item_wrapper}>
                 {ItemElement}
             </div>

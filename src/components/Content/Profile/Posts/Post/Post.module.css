@@ -6,13 +6,16 @@
 }
 
 .post{
-    background-color: #9fc9c8;
-    border: #648382 solid 1px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    width: 40rem;
+    border-radius: 15px;
+    width: 500px;
+    height: 150px;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: #9fb2b5 10px 10px 40px;
 }
 
 .avatar{
@@ -26,7 +29,8 @@
     color: #45b145;
     align-self: flex-end;
     font-size: 20px;
-
+    margin: 10px;
+    width: 50px;
 }
 
 .text{
