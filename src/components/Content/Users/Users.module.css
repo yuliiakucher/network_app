@@ -94,6 +94,7 @@
 
 .page_selected{
     color: #6964ff;
-    cursor: pointer;
     width: 30px;
+    font-weight: bold;
+
 }
