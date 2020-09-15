@@ -5,7 +5,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMapMarkedAlt} from "@fortawesome/free-solid-svg-icons";
 
 const Users = (props) => {
-    debugger
     let pagesNumber = Math.ceil(props.totalPagesCount / props.pageSize)
     let pages = []
     for (let i = 1; i <= pagesNumber; i++) {
