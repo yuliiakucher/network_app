@@ -7,7 +7,7 @@ const SET_TOTAL_PAGES_COUNT = 'SET_TOTAL_PAGES_COUNT'
 const initialState = {
     usersData: [],
     currentPage: 1,
-    totalPagesCount: 0,
+    totalPagesCount: 10,
     pageSize: 10
 }
 
