@@ -1,13 +1,10 @@
 import React from "react";
-import style from './Preloader.module.css'
+import loader from '../../media/img/loader.svg'
 
 const Preloader = () => {
     return (
-        <div className={style.lds_ring}>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
+        <div>
+            <img src={loader} alt='loader'/>
         </div>
     )
 }

@@ -1,9 +1,8 @@
 import React from "react";
 import details from './ProfileDetails.module.css'
-import profile from "../Profile.module.css";
 
 
-const ProfileDetails = () => {
+const ProfileDetails = (props) => {
     return (
         <>
             <div>
@@ -12,7 +11,7 @@ const ProfileDetails = () => {
                      alt='profile'/>
             </div>
             <div>
-                profile info
+                {props.profile.fullName}
             </div>
         </>
 

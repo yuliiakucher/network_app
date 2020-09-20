@@ -8,7 +8,7 @@ const Posts =(props) =>{
 
 
 
-    const PostItem = props.postsData.map(post =>  <Post likes_count={post.likes_count} message={post.message}/>)
+    const PostItem = props.postsData.map(post =>  <Post key={post.id} likes_count={post.likes_count} message={post.message}/>)
 
     return(
         <div className={posts.p_container}>

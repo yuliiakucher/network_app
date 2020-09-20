@@ -23,8 +23,8 @@ export class UsersContainerClass extends React.Component {
     }
 
     changeCurrentPage = (page) => {
-        this.props.setCurrentPage(page)
         this.props.setPreloader(true)
+        this.props.setCurrentPage(page)
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
             .then(response => {
                 this.props.setUsers(response.data.items)

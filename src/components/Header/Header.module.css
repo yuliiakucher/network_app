@@ -28,3 +28,16 @@
 }
 
 
+
+.btn{
+    height: 30px;
+    width: 65px;
+    background-color: #6964ff;
+    font-size: 17px;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+

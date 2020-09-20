@@ -3,6 +3,7 @@ import styles from "./Users.module.css";
 import default_avatar from "../../../media/img/default_avatar.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMapMarkedAlt} from "@fortawesome/free-solid-svg-icons";
+import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
     let pagesNumber = Math.ceil(props.totalPagesCount / props.pageSize)
@@ -23,8 +24,10 @@ const Users = (props) => {
             {props.users.map(user => (
                 <div className={styles.users_wrapper} key={user.id}>
                     <div className={styles.subwrapper_left}>
-                        <img className={styles.photo}
-                             src={user.photos.small ? user.photos.small : default_avatar} alt='users icon'/>
+                        <NavLink to={`/profile/${user.id}`}>
+                            <img className={styles.photo}
+                                 src={user.photos.small ? user.photos.small : default_avatar} alt='users icon'/>
+                        </NavLink>
                         {user.followed
                             ? <button className={styles.btn_user} onClick={() => {
                                 props.unfollowUser(user.id)
