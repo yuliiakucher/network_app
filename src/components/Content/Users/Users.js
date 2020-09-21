@@ -33,22 +33,10 @@ const Users = (props) => {
                         </NavLink>
                         {user.followed
                             ? <button className={styles.btn_user} onClick={() => {
-
-                                usersAPI.unfollowUser(user.id)
-                                    .then(data => {
-                                        if (data.resultCode === 0) {
-                                            props.unfollowUser(user.id)
-                                        }
-                                    })
-
+                                props.unfollowUser(user.id)
                             }}>Unfollow</button>
                             : <button className={styles.btn_user} onClick={() => {
-                                usersAPI.followUser(user.id)
-                                    .then(data => {
-                                        if (data.resultCode === 0) {
-                                            props.followUser(user.id)
-                                        }
-                                    })
+                                props.followUser(user.id)
                             }}>Follow</button>
                         }
                     </div>

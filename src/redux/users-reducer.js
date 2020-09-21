@@ -1,3 +1,5 @@
+import {usersAPI} from "../api/api";
+
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET_USERS'
@@ -66,9 +68,9 @@ const UsersReducer = (state=initialState, action) => {
 }
 
 
-export let followUser = (userId) => ({type: FOLLOW, userId: userId})
+export let followUserSuccess = (userId) => ({type: FOLLOW, userId: userId})
 
-export let unfollowUser = (userId) => ({type: UNFOLLOW, userId: userId})
+export let unfollowUserSuccess = (userId) => ({type: UNFOLLOW, userId: userId})
 
 export let setUsers = (users) => ({type: SET_USERS, users: users})
 
@@ -77,5 +79,40 @@ export let setCurrentPage = (page) => ({type: SET_CURRENT_PAGE, page})
 export let setTotalPages = (pagesNumber) => ({type: SET_TOTAL_PAGES_COUNT, pagesNumber})
 
 export let setPreloader = (value) => ({type: SET_PRELOADER, value})
+
+
+export const setUsersThunk = (currentPage, pageSize) => {
+    return (dispatch) => {
+        dispatch(setPreloader(true))
+        dispatch(setCurrentPage(currentPage))
+        usersAPI.getUsers(currentPage, pageSize).then(data => {
+            dispatch(setUsers(data.items))
+            dispatch(setTotalPages(data.totalCount))
+            dispatch(setPreloader(false))
+        })
+    }
+}
+
+export const unfollowUser = (userId) => {
+    return (dispatch) => {
+        usersAPI.unfollowUser(userId).then(data => {
+            if (data.resultCode === 0) {
+                dispatch(unfollowUserSuccess(userId))
+            }
+        })
+    }
+}
+
+export const followUser = (userId) => {
+    return (dispatch) => {
+        usersAPI.followUser(userId).then(data => {
+            if (data.resultCode === 0) {
+                dispatch(followUserSuccess(userId))
+            }
+        })
+    }
+}
+
+
 
 export default UsersReducer
