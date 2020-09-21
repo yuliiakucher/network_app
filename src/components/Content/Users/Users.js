@@ -4,8 +4,7 @@ import default_avatar from "../../../media/img/default_avatar.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMapMarkedAlt} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
-import * as axios from "axios";
-import {usersAPI} from "../../../api/api";
+
 
 const Users = (props) => {
     let pagesNumber = Math.ceil(props.totalPagesCount / props.pageSize)

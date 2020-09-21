@@ -1,5 +1,6 @@
 import React from "react";
 import details from './ProfileDetails.module.css'
+import ProfileStatus from "./ProfileStatus/ProfileStatus";
 
 
 const ProfileDetails = (props) => {
@@ -10,6 +11,7 @@ const ProfileDetails = (props) => {
                      src={require('../../../../media/img/rose.jpg')}
                      alt='profile'/>
             </div>
+            <ProfileStatus status='la la la'/>
             <div>
                 {props.profile.fullName}
             </div>
