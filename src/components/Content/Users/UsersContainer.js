@@ -8,16 +8,16 @@ import {
 import * as axios from "axios";
 import React from "react";
 import Preloader from "../../Preloader/Preloader";
+import {usersAPI} from "../../../api/api";
 
 export class UsersContainerClass extends React.Component {
 
     componentDidMount() {
+        debugger
         this.props.setPreloader(true)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.setUsers(response.data.items)
-                this.props.setTotalPages(response.data.totalCount)
-                console.log(response.data.totalCount)
+        usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
+                this.props.setUsers(data.items)
+                this.props.setTotalPages(data.totalCount)
                 this.props.setPreloader(false)
             })
     }
@@ -25,9 +25,8 @@ export class UsersContainerClass extends React.Component {
     changeCurrentPage = (page) => {
         this.props.setPreloader(true)
         this.props.setCurrentPage(page)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.setUsers(response.data.items)
+        usersAPI.getUsers(page, this.props.pageSize).then(data => {
+                this.props.setUsers(data.items)
                 this.props.setPreloader(false)
             })
     }
