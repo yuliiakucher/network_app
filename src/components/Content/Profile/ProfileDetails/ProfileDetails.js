@@ -11,7 +11,8 @@ const ProfileDetails = (props) => {
                      src={require('../../../../media/img/rose.jpg')}
                      alt='profile'/>
             </div>
-            <ProfileStatus status='la la la'/>
+            <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+            <hr/>
             <div>
                 {props.profile.fullName}
             </div>

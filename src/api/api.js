@@ -47,6 +47,22 @@ export const Authentication = ({
                     return response.data
                 })
         )
+    },
+    userLogin(email, password, rememberMe=false){
+        return(
+            instance.post('auth/login', {email, password, rememberMe})
+                .then(response => {
+                    return response.data
+                })
+        )
+    },
+    userLogout(){
+        return(
+            instance.delete('auth/login')
+                .then(response => {
+                    return response.data
+                })
+        )
     }
 })
 
@@ -54,10 +70,28 @@ export const ProfileApi = ({
     getUserProfile(userId){
         return(
             instance.get(`profile/${userId}`)
+                .then(response => {
+                    return response.data
+                })
+
+
+        )
+    },
+    getUserStatus(userId){
+        return(
+            instance.get(`profile/status/${userId}`)
+                .then(response => {
+                    return response.data})
+        )
+    },
+    updateUserStatus(status){
+        return(
+            instance.put(`profile/status/`, { status: status})
                 .then(response => response.data)
         )
     }
 })
+
 
 
 

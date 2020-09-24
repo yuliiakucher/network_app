@@ -2,8 +2,11 @@ import React from "react";
 import header from './Header.module.css'
 import SearcherContainer from "./Searcher/SearcherContainer";
 import {NavLink} from "react-router-dom";
+import {userLogout} from "../../redux/auth-reducer";
+
 
 const Header = (props) => {
+
     return (
         <header className={header.header}>
             <div className={header.header_container}>
@@ -12,9 +15,12 @@ const Header = (props) => {
             </div>
             <SearcherContainer/>
             {props.isAuth
-                ?<div>{props.login}</div>
-                :<NavLink to='/login'>
-                    <button className={header.btn}>Login</button>
+                ? <div>
+                    {props.login}
+                    <button onClick={() => props.userLogout()} type='submit'>Logout</button>
+                </div>
+                : <NavLink to='/login'>
+                    <button className={header.btn_header}>Login</button>
                 </NavLink>
             }
 

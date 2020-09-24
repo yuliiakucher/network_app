@@ -25,7 +25,7 @@ const NewMessage = (props) => {
             />
             <button
                 onClick={addMessage}
-                className={new_message.btn}>Send message</button>
+                className={new_message.btn_message}>Send message</button>
         </div>
     )
 }
