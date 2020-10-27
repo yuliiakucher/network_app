@@ -26,7 +26,7 @@ export let setAuthUser = (userId, login, email, isAuth) => ({type: SET_AUTH_USER
 
 export const userAuth = () => {
     return (dispatch) => {
-        Authentication.userAuth()
+        return Authentication.userAuth()
             .then(data => {
                     if (data.resultCode === 0) {
                         let {id, login, email} = data.data

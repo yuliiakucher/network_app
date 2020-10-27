@@ -4,25 +4,16 @@ import default_avatar from "../../../media/img/default_avatar.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMapMarkedAlt} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
+import Paginator from "../../Paginator/Paginator";
 
 
 const Users = (props) => {
-    let pagesNumber = Math.ceil(props.totalPagesCount / props.pageSize)
-    let pages = []
-    for (let i = 1; i <= pagesNumber; i++) {
-        pages.push(i)
-    }
     return (
         <div>
-            <div className={styles.page_container}>
-                {pages.map(page => {
-                    return <div
-                        key={page}
-                        className={page !== props.currentPage ? styles.page : styles.page_selected}
-                        onClick={() => props.changeCurrentPage(page)}
-                    >{page}</div>
-                })}
-            </div>
+            <Paginator totalPagesCount={props.totalPagesCount}
+                       pageSize={props.pageSize}
+                       currentPage={props.currentPage}
+                       changeCurrentPage={props.changeCurrentPage}/>
             {props.users.map(user => (
                 <div className={styles.users_wrapper} key={user.id}>
                     <div className={styles.subwrapper_left}>

@@ -6,13 +6,19 @@ import './index.css';
 import App from './App';
 import store from "./redux/redux-store";
 import {Provider} from "react-redux";
+import {BrowserRouter} from "react-router-dom";
+import Preloader from "./components/Preloader/Preloader";
 
 
 export let rerenderDOM = () => {
     ReactDOM.render(
         <React.StrictMode>
             <Provider store={store}>
-                <App/>
+                <React.Suspense fallback={<Preloader/>}>
+                    <BrowserRouter>
+                        <App/>
+                    </BrowserRouter>
+                </React.Suspense>
             </Provider>
         </React.StrictMode>,
         document.getElementById('root')

@@ -46,6 +46,7 @@ export const Authentication = ({
                 .then(response => {
                     return response.data
                 })
+                .catch(error => console.log(error))
         )
     },
     userLogin(email, password, rememberMe=false){
@@ -54,6 +55,7 @@ export const Authentication = ({
                 .then(response => {
                     return response.data
                 })
+                .catch(error => console.log(error))
         )
     },
     userLogout(){

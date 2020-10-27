@@ -80,20 +80,3 @@
 .icon{
     color: #6964ff;
 }
-
-.page_container{
-    display: flex;
-    flex-direction: row;
-}
-
-.page{
-    cursor: pointer;
-    width: 30px;
-}
-
-.page_selected{
-    color: #6964ff;
-    width: 30px;
-    font-weight: bold;
-
-}
